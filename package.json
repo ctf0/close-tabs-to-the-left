@@ -31,10 +31,6 @@
                 {
                     "command": "workbench.action.closeEditorsToTheLeft",
                     "group": "5_close"
-                },
-                {
-                    "command": "workbench.action.closeEditorsToTheRight",
-                    "group": "5_close"
                 }
             ],
             "editor/title/context": [
