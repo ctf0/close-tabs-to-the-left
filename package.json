@@ -2,7 +2,7 @@
     "name": "close-tabs-to-the-left",
     "displayName": "close tabs to the left",
     "description": "simply adds 'Close to the Left' item to the Title Tab menu",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "ctf0",
     "repository": "https://github.com/ctf0/close-tabs-to-the-left.git",
     "engines": {
