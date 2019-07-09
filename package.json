@@ -4,14 +4,7 @@
     "description": "simply adds 'Close to the Left' item to the Title Tab menu",
     "version": "0.0.1",
     "publisher": "ctf0",
-    "homepage": "https://github.com/ctf0/close-tabs-to-the-left/blob/master/README.md",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ctf0/close-tabs-to-the-left.git"
-    },
-    "bugs": {
-        "url": "https://github.com/ctf0/close-tabs-to-the-left/issues"
-    },
+    "repository": "https://github.com/ctf0/close-tabs-to-the-left.git",
     "engines": {
         "vscode": "^1.25.0"
     },
