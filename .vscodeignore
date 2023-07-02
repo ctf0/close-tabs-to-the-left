@@ -2,7 +2,11 @@
 .vscode-test/**
 test/**
 .gitignore
-jsconfig.json
 vsc-extension-quickstart.md
-.eslintrc.json
-reopen-demo.gif
+**/jsconfig.json
+**/*.map
+**/.eslintrc.json
+.history
+.DS_Store
+*.vsix
+src/**

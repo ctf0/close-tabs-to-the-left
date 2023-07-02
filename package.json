@@ -2,11 +2,11 @@
     "name": "close-tabs-to-the-left",
     "displayName": "close tabs to the left",
     "description": "simply adds 'Close to the Left' item to the Title Tab menu",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "ctf0",
     "repository": "https://github.com/ctf0/close-tabs-to-the-left.git",
     "engines": {
-        "vscode": "^1.25.0"
+        "vscode": "^1.68.0"
     },
     "categories": [
         "Other"
@@ -17,22 +17,46 @@
         "tabs",
         "editor"
     ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
     "icon": "icon.png",
+    "main": "./out/main",
     "contributes": {
-		"commands": [
-			{
-				"command": "workbench.action.closeEditorsToTheLeft",
-				"title": "Close to the Left",
-				"enablement": "!activeEditorIsFirstInGroup"
-			}
-		],
-		"menus": {
-			"editor/title/context": [
-				{
-					"command": "workbench.action.closeEditorsToTheLeft",
-					"group": "1_close@29"
-				}
-			]
-		}
-	}
+        "commands": [
+            {
+                "command": "cetl",
+                "title": "Close to the Left",
+                "enablement": "!activeEditorIsFirstInGroup"
+            }
+        ],
+        "menus": {
+            "editor/title/context": [
+                {
+                    "command": "cetl",
+                    "group": "1_close@29"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "cetl",
+                    "when": "false"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run esbuild-base -- --pure:console.log --minify",
+        "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+        "esbuild": "npm run esbuild-base -- --sourcemap",
+        "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+        "watch": "npm run esbuild"
+    },
+    "devDependencies": {
+        "@types/node": "^20.3.3",
+        "@types/vscode": "^1.68.0",
+        "esbuild": "^0.18.11",
+        "typescript": "^5.1.6"
+    },
+    "dependencies": {}
 }
