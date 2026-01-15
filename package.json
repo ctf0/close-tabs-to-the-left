@@ -26,7 +26,7 @@
         "commands": [
             {
                 "command": "cetl",
-                "title": "Close to the Left",
+                "title": "%command.closeToLeftTitle%",
                 "enablement": "!activeEditorIsFirstInGroup"
             }
         ],
